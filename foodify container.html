@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Foodify</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Josefin+Sans');
+
+.logo {
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 50%;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 100px;
+}
+
+.tagline {
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+margin-bottom: 60px;
+    width: 30%;
+    text-align: center;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+color: white;
+}
+
+.subtitle {
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+body{
+  background: black;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+color: white;
+}
+
+.container{
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container{
+    width: 33.33333%;
+  }
+}
+
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.container2, .container3{
+  flex: 25%;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+
+.container2, .container3{
+  padding: 1em 0;
+  float: left;
+  width: 33.33%;
+}
+@media screen and (max-width: 640px){
+  .container2, .container3{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container2, .container3{
+    width: 33.33%;
+  }
+}
+
+.container2 .title, .container3 .title{
+  color: #fffff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.container4{
+  flex: 25%;
+  padding: 5px;
+  margin-bottom: 100px;
+}
+
+.container4{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 640px){
+  .container4{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container4{
+    width: 25%;
+  }
+}
+
+.container4 .title{
+  color: #fffff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input { 
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background-color: gray;
+      color: black;
+    } 
+
+.newsletter{
+background-color: black;
+}
+
+.newstitle {
+text-align: center;
+color: gray;
+}
+
+.newsletterp {
+color: gray;
+text-align: center;
+font-size: 16px;
+}
+
+.section{
+margin-bottom: 40px;
+}
+ h3{
+margin-bottom: 10px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<section class="section">
+<h1 class="logo">Foodify</h1>
+<h2 class="tagline">Connecting tastebuds all over the world.</h2>
+</section>
+
+<section class="section">
+<h3 class="subtitle">Your Favourites</h3>
+
+<div class="container">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food1.jpg" alt="burger">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">American</h3>
+        <p class="content-text">Burger, Chicken Wings, TexMex</p>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food2.jpg" alt="pizza">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Italian</h3>
+        <p class="content-text">Pizza, Pasta, Risotto</p>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food3.jpg" alt="chinese">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Chinese</h3>
+        <p class="content-text">Chow Mein, Dimsum, Dumplings</p>
+      </div>
+  </div>
+</div>
+
+<div class="container2">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food4.jpg" alt="donuts">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Desserts</h3>
+        <p class="content-text">Cakes, Donuts, Tarts</p>
+      </div>
+  </div>
+</div>
+
+<div class="container2">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food5.jpg" alt="vietnamese">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Vietnamese</h3>
+        <p class="content-text">Beef Banh Mi, Caramel Pork, Meatball Pho</p>
+      </div>
+  </div>
+</div>
+
+<div class="container2">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food6.jpg" alt="indian">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Indian</h3>
+        <p class="content-text">Curry, Samosas, Pilaf</p>
+      </div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div>
+<h3 class="subtitle">Discover Something New</h3>
+
+<div class="container3">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food7.jpg" alt="mexican">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Mexican</h3>
+        <p class="content-text">Burritos, Quesadas, Tacos</p>
+      </div>
+  </div>
+</div>
+
+<div class="container3">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food8.jpg" alt="sushi">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Sushi</h3>
+        <p class="content-text">Nigiri, Sashimi, Temaki</p>
+      </div>
+  </div>
+</div>
+
+<div class="container3">
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food9.jpg" alt="lebanese">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Lebanese</h3>
+        <p class="content-text">Fattoush, Siyyadiyeh, Tabbouleh</p>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div>
+<h3 class="subtitle">What Your Foodie Friends Are Loving</h3>
+<div class="container4">
+<h4 class="title">Adesoye</h4>
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food10.jpg" alt="turkish">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Turkish</h3>
+        <p class="content-text">Cilbir, Kuzu Tandir, Menemen</p>
+      </div>
+  </div>
+</div>
+
+<div class="container4">
+<h4 class="title">Hadiza</h4>
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food11.jpg" alt="greek">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Greek</h3>
+        <p class="content-text">Barbouni, Dolmades, Horiatiki</p>
+      </div>
+  </div>
+</div>
+
+<div class="container4">
+<h4 class="title">Isak</h4>
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food12.jpg" alt="norwegian">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Norwegian</h3>
+        <p class="content-text">Krumkake, Lapskaus, Smørbrød</p>
+      </div>
+  </div>
+</div>
+
+<div class="container4">
+<h4 class="title">Sana</h4>
+  <div class="content">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/food13.jpg" alt="moroccan">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">Moroccan</h3>
+        <p class="content-text">B'ssara, Kefta, Tagine</p>
+      </div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="newsletter">
+<h2 class="newstitle"> Sign up to our newsletter </h2>
+<p class="newsletterp">Sign up to our e-mails to be the first to hear about the latest resturants, newst partners and exclusive offers. You can unsubscribe at any time.</p>
+<input type="email" placeholder="Email Address">
+  <input type="Submit">
+</div>
+</section>
+
+</body>
+</html>
